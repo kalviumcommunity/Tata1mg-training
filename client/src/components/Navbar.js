@@ -10,7 +10,9 @@ const Navbar = () => {
         <h1>Categories</h1>
         <div>{/* different categories will be defined */}</div>
       </div>
-      <div>{/* Profile */}</div>
+      <div>{/* Profile */}
+  
+      </div>
     </div>
   );
 };
