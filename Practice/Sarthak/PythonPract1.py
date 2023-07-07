@@ -1,4 +1,5 @@
 #This is the solution to the "Power of Two" problem in Leetcode which I earlier solved using C++
+#Question link "https://leetcode.com/problems/power-of-two/"
 class Solution:
     def isPowerOfTwo(self, n: int) -> bool:
          for i in range(31):
@@ -9,6 +10,7 @@ class Solution:
     
 
 #Solution to the "Reverse Integer" question from Leetcode in Python
+#Question link "https://leetcode.com/problems/reverse-integer/"
 class Solution:
     def reverse(self, x: int) -> int:
         is_negative = x < 0
@@ -28,6 +30,7 @@ class Solution:
         return ans
     
 #Solution to "Truncate sentence" problem
+#Question link "https://leetcode.com/problems/truncate-sentence/"
 class Solution:
     def truncateSentence(self, s: str, k: int) -> str:
         space = 0
@@ -48,6 +51,7 @@ class Solution:
         return re
     
 #Solution to "Valid Anagram" problem
+#Question link "https://leetcode.com/problems/valid-anagram/"
 class Solution:
     def isAnagram(self, s: str, t: str) -> bool:
         n = len(s)
