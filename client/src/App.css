@@ -3,6 +3,11 @@
 .App {
   text-align: center;
   font-family: 'Wix Madefor Display', sans-serif;
+  display: flex;
+}
+
+.other{
+  width: fit-content;
 }
 
 .App-logo {
