@@ -37,7 +37,7 @@ const SignUp = () => {
       sessionStorage.setItem("name", values.name);
 
       setSubmitting(false);
-      window.open("http://localhost:3000/", "_self");
+      window.open(process.env.REACT_APP_PORT, "_self");
     }, 1000);
   };
 

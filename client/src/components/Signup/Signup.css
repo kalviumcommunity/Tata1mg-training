@@ -8,8 +8,8 @@
 .base {
   background: rgba(36, 52, 229, 1);
   width: 458px;
-  /* height: 40rem; */
-  /* text-align: center; */
+  height: 40rem;
+  text-align: center;
   padding: 10%;
 }
 h1 {

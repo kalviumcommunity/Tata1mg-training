@@ -33,3 +33,35 @@ class Solution:
         if sorted1==sorted2:
             return True
         return False
+
+# Question 3 Leetcode
+# Question Link: https://practice.geeksforgeeks.org/problems/find-triplets-with-zero-sum/1
+# Answer
+def findTriplets(self, arr, n):
+        #code here
+        found = False
+        arr.sort()
+        for i in range(n - 1):
+            l = i + 1
+            r = n - 1
+            x = arr[i]
+            while l < r:
+                if x + arr[l] + arr[r] == 0:
+                    l += 1
+                    r -= 1
+                    found = True
+                    break
+                elif x + arr[l] + arr[r] < 0:
+                    l += 1
+                else:
+                    r -= 1
+            if found:
+                break
+        return found
+
+# Question 4 Leetcode
+# Question Link: https://practice.geeksforgeeks.org/problems/transpose-of-matrix-1587115621/1
+# Answer
+for i in range(n):
+            for j in range(i+1 ,n):
+                matrix[i][j], matrix[j][i] =  matrix[j][i], matrix[i][j] 
