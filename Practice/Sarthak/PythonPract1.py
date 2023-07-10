@@ -66,3 +66,53 @@ class Solution:
             return True
 
         return False
+    
+#Solution to "Find Numbers with Even Number of Digits" problem
+#Question Link "https://leetcode.com/problems/find-numbers-with-even-number-of-digits/"
+class Solution:
+    def findNumbers(self, nums: List[int]) -> int:
+        ans = 0
+        for i in nums:
+            count = 0
+            k = i
+
+            while k!= 0:
+                k //= 10
+                count += 1
+
+            if count % 2 == 0:
+                ans += 1
+
+        return ans
+    
+#Solution to the "Reverse String" problem
+#Question Link "https://leetcode.com/problems/reverse-string/"
+class Solution:
+    def reverseString(self, s: List[str]) -> None:
+        """
+        Do not return anything, modify s in-place instead.
+        """
+        start = 0
+        end = len(s) - 1
+        while start < end:
+            s[start], s[end] = s[end], s[start]
+            start += 1
+            end -= 1
+
+#Solution to the "Best Time to Buy and Sell Stock" problem
+#Question Link "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/"
+class Solution:
+    def maxProfit(self, prices: List[int]) -> int:
+        left = 0
+        right = 1
+        ans = 0
+
+        while right < len(prices):
+            if prices[left] < prices[right]:
+                profit = prices[right] - prices[left]
+                ans = max(ans, profit)
+            else:
+                left = right
+            right += 1
+
+        return ans
