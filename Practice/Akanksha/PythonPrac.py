@@ -32,4 +32,3 @@ class Solution:
 
         if sorted1==sorted2:
             return True
-        return False
