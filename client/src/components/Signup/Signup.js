@@ -38,6 +38,7 @@ const SignUp = () => {
 
       setSubmitting(false);
       window.open(process.env.REACT_APP_PORT, "_self");
+
     }, 1000);
   };
 

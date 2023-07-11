@@ -59,7 +59,7 @@ def findTriplets(self, arr, n):
                 break
         return found
 
-# Question 4 Geeks for Geeks
+# Question 4 Leetcode
 # Question Link: https://practice.geeksforgeeks.org/problems/transpose-of-matrix-1587115621/1
 # Answer
 for i in range(n):
