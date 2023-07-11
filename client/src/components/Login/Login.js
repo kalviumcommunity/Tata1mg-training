@@ -3,7 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 
 import { AiOutlineArrowRight } from "react-icons/ai";
 
-const SignUp = () => {
+const Login= () => {
   const initialValues = {
     name: "",
     email: "",
@@ -74,4 +74,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default Login;

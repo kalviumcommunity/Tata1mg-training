@@ -85,8 +85,11 @@ const SignUp = () => {
             />
             <ErrorMessage name="confirmPassword" component="div" />
             <br />
-            <button type="submit" disabled={isSubmitting} id="submit">
-              <AiOutlineArrowRight />
+            <button type="submit" disabled={isSubmitting} className="submit">
+              <AiOutlineArrowRight
+                color="rgba(255, 255, 255, 1)"
+                backgroundColor="rgba(6, 21, 190, 1)"
+              />
             </button>
           </div>
         </Form>

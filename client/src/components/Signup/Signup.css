@@ -16,3 +16,18 @@ h1 {
   background: rgba(36, 52, 229, 1);
   color: rgba(255, 255, 255, 1);
 }
+.submit {
+  background-color: rgba(6, 21, 190, 1);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 2rem;
+  margin: 2%;
+  border: 1px solid rgba(6, 21, 190, 1);
+}
+.block {
+  background: rgba(217, 217, 217, 1);
+  color: black;
+  margin: 3%;
+  padding: 2%;
+  border-radius: 0.5rem;
+}
