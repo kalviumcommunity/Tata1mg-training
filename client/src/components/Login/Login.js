@@ -3,7 +3,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 
 import { AiOutlineArrowRight } from "react-icons/ai";
 
-const SignUp = () => {
+const Login= () => {
   const initialValues = {
     name: "",
     email: "",
@@ -28,9 +28,8 @@ const SignUp = () => {
     setTimeout(() => {
       console.log(values);
       sessionStorage.setItem("name", values.name);
-
       setSubmitting(false);
-      window.open("http://localhost:3000/", "_self");
+      window.open(process.env.REACT_APP_PORT, "_self");
     }, 1000);
   };
 
@@ -74,4 +73,4 @@ const SignUp = () => {
   );
 };
 
-export default SignUp;
+export default Login;
