@@ -106,3 +106,29 @@ def findK(self, a, n, m, k):
                     return a[i][fj]
             fj+=1
         return -1
+
+# Question 7 Geeks for geeks
+# Question Link:https://practice.geeksforgeeks.org/problems/power-of-numbers-1587115620/1
+# Answer
+ def power(self,N,R):
+        #Your code here
+        mod = int(1e9) + 7 
+        return pow(N, R, mod)
+
+# Question 8 Geeks for geeks
+# Question Link: https://practice.geeksforgeeks.org/problems/count-the-subarrays-having-product-less-than-k1708/1
+# Answer
+def countSubArrayProductLessThanK(self, a, n, k):
+        #Code here
+        left=0
+        prod=1
+        count=0
+        for i in range(n):
+            prod*=a[i]
+            while prod>=k and left<=i:
+                prod/=a[left]
+                left+=1
+            count+=i-left+1
+        
+        return count
+    
