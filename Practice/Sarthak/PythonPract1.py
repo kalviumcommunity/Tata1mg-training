@@ -116,3 +116,29 @@ class Solution:
             right += 1
 
         return ans
+    
+#Solution to the "Ugly Number" problem
+#Question Link "https://leetcode.com/problems/ugly-number/"
+class Solution:
+    def isUgly(self, n: int) -> bool:
+        if n<=0:
+            return False
+
+        for p in [2, 3, 5]:
+            while n%p == 0:
+                n = n // p
+        return n == 1
+    
+#Solution to the "Length of Last Word" problem
+#Question Link "https://leetcode.com/problems/length-of-last-word"
+class Solution:
+    def lengthOfLastWord(self, s: str) -> int:
+        i = len(s) - 1
+        ans = 0
+
+        while s[i] == " ":
+            i -= 1
+        while i >= 0 and s[i] != " ":
+            ans += 1
+            i -= 1
+        return ans
