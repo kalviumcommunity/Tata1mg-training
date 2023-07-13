@@ -131,4 +131,44 @@ def countSubArrayProductLessThanK(self, a, n, k):
             count+=i-left+1
         
         return count
-    
+
+# Question 9 Geeks for geeks
+# Question Link:https://practice.geeksforgeeks.org/problems/copy-set-bits-in-range0623/1
+# Answer
+def setSetBit(self, x, y, l, r):
+        # code here
+        mask = (1<<(r - l + 1))
+        mask-=1 
+        mask = (mask <<(l - 1))
+        mask = mask & y
+        x = x | mask
+        return x
+
+# Question 10 Geeks for geeks
+# Question Link: https://practice.geeksforgeeks.org/problems/unique-frequencies-of-not/1
+# Answer 
+def isFrequencyUnique(self, n : int, arr : List[int]) -> bool:
+        # code here
+        a=[]
+        b=[]
+        for i in arr:
+            if i in a:
+                pass
+            else:
+                c=arr.count(i)
+                if c in b:
+                    return False
+                else:
+                    b.append(c)
+                    a.append(i)
+        return True
+
+# Question 10 Geeks for geeks
+# Question Link:https://practice.geeksforgeeks.org/problems/merge-two-sorted-arrays-1587115620/1
+# Answer 
+def merge(self,arr1,arr2,n,m):
+        #code here
+        for i in range(m):
+            arr1.append(arr2[i])
+            arr2[i]=''
+        arr1.sort()
