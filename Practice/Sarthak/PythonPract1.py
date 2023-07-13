@@ -142,3 +142,36 @@ class Solution:
             ans += 1
             i -= 1
         return ans
+    
+#Solution to "Number of 1 Bits" problem
+#Question link "https://leetcode.com/problems/number-of-1-bits"
+class Solution:
+    def hammingWeight(self, n: int) -> int:
+        ans = 0
+        while n:
+            ans += n%2
+            n = n >> 1
+        return ans
+    
+#Solution to "Remove Element" problem
+#Question link "https://leetcode.com/problems/remove-element"
+class Solution:
+    def removeElement(self, nums: List[int], val: int) -> int:
+        k = 0
+
+        for i in range(len(nums)):
+            if nums[i] != val:
+                nums[k] = nums[i]
+                k += 1
+        return k
+    
+#Solution to "Remove Duplicates from Sorted Array" problem
+#Question link "https://leetcode.com/problems/remove-duplicates-from-sorted-array"
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        left = 1
+        for right in  range(1, len(nums)):
+            if nums[right] != nums[right - 1]:
+                nums[left] = nums[right]
+                left += 1
+        return left
