@@ -1,0 +1,61 @@
+.mainthing{
+    display: flex;
+    padding: 4%;
+    gap: 4vw;
+}
+
+.post{
+    height: 87vh;
+    width: 35vw;
+}
+
+#posttitle{
+    background: none;
+    text-align: left;
+}
+
+.userdet{
+    display: flex;
+    margin-left: -0.8vw;
+    padding: 7%;
+    gap: 5%;
+}
+
+.userpic{
+    height: 4vh;
+    width: 2vw;
+    border-radius: 50%;
+}
+
+
+#postcom{
+    background: none;
+    text-align: left;
+}
+
+#usern{
+    color: white;
+}
+
+.comments{
+    margin-top: 40%;
+}
+
+.commenter{
+    display:flex ;
+    margin-left: -0.8vw;
+    padding: 7%;
+    gap: 14%;
+}
+
+.commentbox{
+    background-color: white;
+}
+
+#ptcom{
+    width: 8vw;
+    cursor: pointer;
+    padding-top: 1%;
+    background-color: #471192;
+    color: white;
+}
