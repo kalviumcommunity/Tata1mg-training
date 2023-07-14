@@ -163,7 +163,7 @@ def isFrequencyUnique(self, n : int, arr : List[int]) -> bool:
                     a.append(i)
         return True
 
-# Question 10 Geeks for geeks
+# Question 11 Geeks for geeks
 # Question Link:https://practice.geeksforgeeks.org/problems/merge-two-sorted-arrays-1587115620/1
 # Answer 
 def merge(self,arr1,arr2,n,m):
@@ -172,3 +172,29 @@ def merge(self,arr1,arr2,n,m):
             arr1.append(arr2[i])
             arr2[i]=''
         arr1.sort()
+
+# Question 12 Geeks for geeks
+# Question Link: https://practice.geeksforgeeks.org/problems/implement-two-stacks-in-an-array/1
+# Answer 
+def __init__(self, n=100):
+        self.arr = [[], []]
+
+    def push1(self, x):
+        self.arr[0].append(x)
+        
+    def push2(self, x):
+        self.arr[1].append(x)
+
+    def pop1(self):
+        if self.arr[0]:
+            return self.arr[0].pop()
+        return -1
+
+    def pop2(self):
+        if self.arr[1]:
+            return self.arr[1].pop()
+        return -1
+
+# Question 13 Geeks for geeks
+# Question Link: 
+# Answer 

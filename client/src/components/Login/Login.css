@@ -1,15 +1,16 @@
 .main-page {
   display: flex;
   flex-direction: row;
-  padding: 10%;
+  padding: 20%;
 }
 .base {
   background: rgba(36, 52, 229, 1);
   width: 458px;
-  height: 32rem;
-  padding-top: 10%;
+  height: 21rem;
+  padding-top: 20%;
   padding-left: 10%;
   text-align: left;
+  border-radius: 5%;
 }
 h1 {
   color: rgba(255, 255, 255, 1);
