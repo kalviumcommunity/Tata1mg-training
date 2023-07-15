@@ -1,9 +1,8 @@
 import * as Yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
-
 import { AiOutlineArrowRight } from "react-icons/ai";
-
-const Login= () => {
+import "./Login.css";
+const SignUp = () => {
   const initialValues = {
     name: "",
     email: "",
@@ -38,34 +37,33 @@ const Login= () => {
       initialValues={initialValues}
       validationSchema={validationSchema}
       onSubmit={onSubmit}
-      className="box"
     >
       {({ isSubmitting }) => (
-        <Form className="black">
-          <div className="box">
-            <div>
-              <h1>Welcome</h1>
-              <br />
-              <Field
-                type="email"
-                name="email"
-                placeholder="Email"
-                className="block"
-              />
-              <ErrorMessage name="email" component="div" />
-              <br />
-              <Field
-                type="password"
-                name="password"
-                placeholder="Password "
-                className="block"
-              />
-              <ErrorMessage name="password" component="div" />
-              <br />
-              <button type="submit" disabled={isSubmitting} id="submit">
-                <AiOutlineArrowRight />
-              </button>
-            </div>
+        <Form className="main-page">
+          <div>Image</div>
+          <div className="base">
+            {/* <div> */}
+            <h1>Welcome</h1>
+            <Field
+              type="email"
+              name="email"
+              placeholder="Email"
+              className="block"
+            />
+            <ErrorMessage name="email" component="div" />
+            <br />
+            <Field
+              type="password"
+              name="password"
+              placeholder="Password "
+              className="block"
+            />
+            <ErrorMessage name="password" component="div" />
+            <br />
+            {/* </div> */}
+            <button type="submit" disabled={isSubmitting} className="submit">
+              <AiOutlineArrowRight color="rgba(255, 255, 255, 1)" size={30} />
+            </button>
           </div>
         </Form>
       )}
@@ -73,4 +71,4 @@ const Login= () => {
   );
 };
 
-export default Login;
+export default SignUp;

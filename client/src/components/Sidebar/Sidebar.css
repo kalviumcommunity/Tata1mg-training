@@ -1,32 +1,33 @@
-*{
-    padding: 0;
-    margin: 0;
+* {
+  padding: 0;
+  margin: 0;
 }
 
-.sidebar{
-    background-color: #2434E5;
-    height: 100%;
-    color: white;
+.sidebar {
+  background-color: #2434e5;
+  height: 100%;
+  color: white;
 }
 
-.top{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 3% 5%  5%;
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3% 5% 5%;
 }
 
-.logo{
-    font-size: 21px;
-    line-height: 0;
+.logo {
+  font-size: 21px;
+  line-height: 0;
 }
 
-.sandh{
-    padding-top: 40%
+.sandh {
+  padding-top: 40%;
 }
 
-.home, .search{
-    display: flex;
-    padding: 1%;
-    gap: 1vw;
+.home,
+.search {
+  display: flex;
+  padding: 1%;
+  gap: 1vw;
 }
