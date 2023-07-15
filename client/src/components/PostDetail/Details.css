@@ -5,7 +5,7 @@
 }
 
 .post{
-    height: 87vh;
+    height: 90vh;
     width: 35vw;
 }
 
@@ -38,24 +38,55 @@
 }
 
 .comments{
-    margin-top: 40%;
+    margin-top: 30%;
 }
 
 .commenter{
     display:flex ;
     margin-left: -0.8vw;
     padding: 7%;
-    gap: 14%;
+    gap: 4%;
 }
 
 .commentbox{
     background-color: white;
+    width: 20vw;
 }
 
 #ptcom{
-    width: 8vw;
+    width: 4vw;
     cursor: pointer;
     padding-top: 1%;
     background-color: #471192;
     color: white;
 }
+
+#simposts{
+    background: none;
+    text-align: left;
+    margin-left: 4%;
+}
+
+.masonry {
+    display: flex;
+    margin-left: 2.4vw; 
+    margin-top: 1vh;
+    width: 95%;
+  }
+  
+  .masonrycolumn {
+    padding-left: 2vh; 
+    background-clip: padding-box;
+  }
+  
+  .images {
+    margin-bottom: 2vh; 
+  }
+  
+  .img {
+    display: block;
+    width: 100%;
+    max-height: 70vh;
+    max-width: 70vh;
+    object-fit: cover;
+  }

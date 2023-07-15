@@ -2,11 +2,13 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios';
 import "./Details.css"
 import {AiOutlineArrowRight} from "react-icons/ai"
+import Masonry from 'react-masonry-css';
 
 const PostDetail = () => {
   const [image, setImage] = useState('')
   const [userpic, setUserpic] = useState('')
   const [userpic1, setUserpic1] = useState('')
+  const [similarList, setSimList] = useState([])
 
   useEffect(() => {
     const fetchImage = async () => {
@@ -24,6 +26,27 @@ const PostDetail = () => {
 
     fetchImage();
   }, []);
+
+  useEffect(() => {
+    const fetchSimImages = async () => {
+      try {
+        const url = `https://api.unsplash.com/photos/random?client_id=${process.env.REACT_APP_API_KEY}&count=560`;
+        const response = await axios.get(url);
+        const images = response.data;
+        setSimList(images);
+      } catch (error) {
+        console.error('Failed to retrieve images:', error);
+      }
+    };
+
+    fetchSimImages();
+  }, []);
+
+  const breakpointColumnsObj = {
+    default: 3,
+    1100: 2,
+    700: 1,
+  };
 
   return (
     <div className='main'>
@@ -48,6 +71,25 @@ const PostDetail = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className="sim">
+        <h1 id='simposts'> Similar Posts</h1>
+        <Masonry
+        breakpointCols={breakpointColumnsObj}
+        className="masonry"
+        columnClassName="masonrycolumn"
+      >
+        {similarList.map((image) => (
+           <div key={image.id} className="images">
+          <img
+            key={image.id}
+            src={image.urls.regular}
+            alt={image.alt_description}
+            className="img"
+          />
+          </div>
+        ))}
+      </Masonry>
       </div>
     </div>
   )
