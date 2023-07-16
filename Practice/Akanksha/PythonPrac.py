@@ -226,3 +226,23 @@ def removeDuplicates(self, nums: List[int]) -> int:
                 nums[left] = nums[right]
                 left += 1
         return left
+
+# Question 16 leetcode
+# Question Link: https://leetcode.com/problems/merge-sorted-array/submissions/
+# Answer
+def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        for i in range(m,n+m):
+            nums1[i]=nums2[i-m]
+        nums1.sort()
+
+# Question 17 Geeks for Geeks
+# Question Link: https://practice.geeksforgeeks.org/problems/queue-reversal/1
+# Answer
+def rev(self, q):
+        #add code here
+        stack=[]
+        while not q.empty():
+            stack.append(q.get())
+        while len(stack)!=0:
+            q.put(stack.pop())
+        return q
