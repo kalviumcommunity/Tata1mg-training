@@ -201,3 +201,49 @@ class Solution:
         for i in range(len(nums)):
             ans += (i - nums[i])
         return ans
+    
+#Solution to "Merge Sorted Array" problem
+#Question link "https://leetcode.com/problems/merge-sorted-array/"
+class Solution:
+    def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        """
+        Do not return anything, modify nums1 in-place instead.
+        """
+        for i in  range(n):
+            nums1[i + m] = nums2[i]
+        nums1.sort()
+
+#Solution to "Search Insert Position" problem
+#Question link "https://leetcode.com/problems/search-insert-position/"
+class Solution:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        begin = 0
+        end = len(nums) - 1
+        while begin <= end:
+             bet = (begin + end) // 2
+             if nums[bet] == target:
+                 return bet
+             elif nums[bet] < target:
+                 begin = bet + 1
+             else:
+                 end = bet - 1
+        return begin
+    
+#Solution to "Valid Palindrome" problem
+#Question link https://leetcode.com/problems/valid-palindrome/
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        a= ''
+        for i in s:
+            if i.isalnum():
+                a += i.lower()
+        i = 0
+        j = len(a) - 1
+
+        while i<j:
+            if a[i] != a[j]:
+                return False
+            i += 1
+            j -= 1
+        return True
+            
