@@ -246,3 +246,29 @@ def rev(self, q):
         while len(stack)!=0:
             q.put(stack.pop())
         return q
+
+# Question 18 Geeks for Geeks
+# Question Link: https://practice.geeksforgeeks.org/problems/first-non-repeating-character-in-a-stream1216/1
+# Answer
+def FirstNonRepeating(self, A):
+		# Code here
+        count={}
+		sequence=[]
+		result=""
+		
+		for ch in A:
+		    count[ch] = count.get(ch, 0) + 1
+		
+		    if count[ch]==1:
+		        sequence.append(ch)
+		    elif count[ch]==2:
+		        if ch in sequence:
+		            sequence.remove(ch)
+		    
+		    if sequence:
+		        result += sequence[0]
+		    else:
+		        result += '#'
+		        
+		return result
+
