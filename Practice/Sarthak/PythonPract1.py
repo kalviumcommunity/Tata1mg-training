@@ -175,3 +175,29 @@ class Solution:
                 nums[left] = nums[right]
                 left += 1
         return left
+
+#Solution to "Palindrome Number" problem
+#Question link "https://leetcode.com/problems/palindrome-number/"
+class Solution:
+    def isPalindrome(self, x: int) -> bool:
+        if x < 0:
+            return False
+            
+        reversedNum = 0
+        temp = x
+
+        while temp != 0:
+            digit = temp % 10
+            reversedNum = reversedNum * 10 + digit
+            temp //= 10
+
+        return reversedNum == x
+    
+#Solution to "Missing Number" problem
+#Question Link "https://leetcode.com/problems/missing-number/""
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        ans = len(nums)
+        for i in range(len(nums)):
+            ans += (i - nums[i])
+        return ans
