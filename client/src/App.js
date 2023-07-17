@@ -5,6 +5,7 @@ import Sidebar from "./components/Sidebar/Sidebar";
 import Login from "./components/Login/Login";
 import SignUp from "./components/Signup/Signup";
 import PostDetail from "./components/PostDetail/PostDetail";
+import ProfilePage from "./components/Profile/ProfilePage";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
           <Route path="/detail" element={<PostDetail />} />
+          <Route path="/profile" element={<ProfilePage />} />
         </Routes>
       </div>
     </div>
