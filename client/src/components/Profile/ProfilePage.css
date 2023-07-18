@@ -1,0 +1,43 @@
+.cover-image {
+  height: 100%;
+  width: 100%;
+}
+.user-pic {
+  background: rgba(217, 217, 217, 1);
+  width: 50%;
+  height: 50px;
+  border-radius: 50px;
+  margin-left: 45rem;
+}
+
+.upper-portion {
+  display: flex;
+  flex-direction: column;
+}
+.mid-portion {
+  margin-top: 35%;
+}
+.details {
+  display: flex;
+  flex-direction: row;
+}
+.post-button {
+  background: rgba(71, 17, 146, 1);
+  color: rgba(255, 255, 255, 1);
+  padding: 1% 2%;
+  width: 17%;
+  height: 7%;
+  margin: 3%;
+  border-radius: 50px;
+  margin-left: 40rem;
+}
+.create-button {
+  padding: 1% 2%;
+  width: 17%;
+  height: 7%;
+  margin: 3%;
+  background-color: #041420;
+  color: rgba(255, 255, 255, 1);
+  border: 2px soid #041420;
+  border-radius: 50px;
+}
