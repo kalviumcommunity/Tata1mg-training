@@ -163,7 +163,7 @@ def isFrequencyUnique(self, n : int, arr : List[int]) -> bool:
                     a.append(i)
         return True
 
-# Question 10 Geeks for geeks
+# Question 11 Geeks for geeks
 # Question Link:https://practice.geeksforgeeks.org/problems/merge-two-sorted-arrays-1587115620/1
 # Answer 
 def merge(self,arr1,arr2,n,m):
@@ -172,3 +172,103 @@ def merge(self,arr1,arr2,n,m):
             arr1.append(arr2[i])
             arr2[i]=''
         arr1.sort()
+
+# Question 12 Geeks for geeks
+# Question Link: https://practice.geeksforgeeks.org/problems/implement-two-stacks-in-an-array/1
+# Answer 
+def __init__(self, n=100):
+        self.arr = [[], []]
+
+    def push1(self, x):
+        self.arr[0].append(x)
+        
+    def push2(self, x):
+        self.arr[1].append(x)
+
+    def pop1(self):
+        if self.arr[0]:
+            return self.arr[0].pop()
+        return -1
+
+    def pop2(self):
+        if self.arr[1]:
+            return self.arr[1].pop()
+        return -1
+
+# Question 13 leetcode
+# Question Link: https://leetcode.com/problems/ugly-number/description/
+# Answer 
+def isUgly(self, n: int) -> bool:
+        if n<=0:
+            return False
+        for i in [2,3,5]:
+            while n%i==0:
+                n=n//i
+        return n==1
+
+
+# Question 14 Geeks for Geeks
+# Question Link:https://practice.geeksforgeeks.org/problems/delete-middle-element-of-a-stack/1
+# Answer
+def deleteMid(self, s, sizeOfStack):
+        # code here
+        i=(sizeOfStack-1)//2
+        s.pop(i)
+        return s
+
+# Question 15 leetcode
+# Question Link: https://leetcode.com/problems/remove-duplicates-from-sorted-array/submissions/
+# Answer
+def removeDuplicates(self, nums: List[int]) -> int:
+        left = 1
+        for right in  range(1, len(nums)):
+            if nums[right] != nums[right - 1]:
+                nums[left] = nums[right]
+                left += 1
+        return left
+
+# Question 16 leetcode
+# Question Link: https://leetcode.com/problems/merge-sorted-array/submissions/
+# Answer
+def merge(self, nums1: List[int], m: int, nums2: List[int], n: int) -> None:
+        for i in range(m,n+m):
+            nums1[i]=nums2[i-m]
+        nums1.sort()
+
+# Question 17 Geeks for Geeks
+# Question Link: https://practice.geeksforgeeks.org/problems/queue-reversal/1
+# Answer
+def rev(self, q):
+        #add code here
+        stack=[]
+        while not q.empty():
+            stack.append(q.get())
+        while len(stack)!=0:
+            q.put(stack.pop())
+        return q
+
+# Question 18 Geeks for Geeks
+# Question Link: https://practice.geeksforgeeks.org/problems/first-non-repeating-character-in-a-stream1216/1
+# Answer
+def FirstNonRepeating(self, A):
+		# Code here
+        count={}
+		sequence=[]
+		result=""
+		
+		for ch in A:
+		    count[ch] = count.get(ch, 0) + 1
+		
+		    if count[ch]==1:
+		        sequence.append(ch)
+		    elif count[ch]==2:
+		        if ch in sequence:
+		            sequence.remove(ch)
+		    
+		    if sequence:
+		        result += sequence[0]
+		    else:
+		        result += '#'
+		        
+		return result
+
