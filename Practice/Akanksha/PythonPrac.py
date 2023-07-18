@@ -272,3 +272,43 @@ def FirstNonRepeating(self, A):
 		        
 		return result
 
+# Question 19 Geeks for Geeks
+# Question Link:https://practice.geeksforgeeks.org/problems/longest-repeating-subsequence2004/1
+# Answer
+def LongestRepeatingSubsequence(self, str):
+		# Code here
+		n = len(str)
+        dp = [[0 for _ in range(n + 1)] for _ in range(n + 1)]
+ 
+        for i in range(1, n + 1):
+            for j in range(1, n + 1):
+                if str[i - 1] == str[j - 1] and i != j:
+                    dp[i][j] = 1 + dp[i - 1][j - 1]
+                else:
+                    dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
+ 
+        return dp[n][n]
+
+# Question 20 Leetcode
+# Question Link: https://leetcode.com/problems/length-of-last-word/submissions/
+# Answer
+def lengthOfLastWord(self, s: str) -> int:
+        i = len(s) - 1
+        ans = 0
+
+        while s[i] == " ":
+            i -= 1
+        while i >= 0 and s[i] != " ":
+            ans += 1
+            i -= 1
+        return ans
+
+# Question 21 Leetcode
+# Question Link: https://leetcode.com/problems/number-of-1-bits
+# Answer
+def hammingWeight(self, n: int) -> int:
+        ans = 0
+        while n:
+            ans += n%2
+            n = n >> 1
+        return ans
