@@ -230,7 +230,7 @@ class Solution:
         return begin
     
 #Solution to "Valid Palindrome" problem
-#Question link https://leetcode.com/problems/valid-palindrome/
+#Question link "https://leetcode.com/problems/valid-palindrome/"
 class Solution:
     def isPalindrome(self, s: str) -> bool:
         a= ''
@@ -247,3 +247,11 @@ class Solution:
             j -= 1
         return True
             
+#Solution to the "Two Sum" problem
+#Question link "https://leetcode.com/problems/two-sum/"
+class Solution:
+    def twoSum(self, nums: List[int], target: int) -> List[int]:
+        for i in range(len(nums)):
+            for j in range(i + 1, len(nums)):
+                if nums[i] + nums[j] == target:
+                    return ([i, j])
