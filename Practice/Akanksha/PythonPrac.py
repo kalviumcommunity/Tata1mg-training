@@ -272,3 +272,93 @@ def FirstNonRepeating(self, A):
 		        
 		return result
 
+# Question 19 Geeks for Geeks
+# Question Link:https://practice.geeksforgeeks.org/problems/longest-repeating-subsequence2004/1
+# Answer
+def LongestRepeatingSubsequence(self, str):
+		# Code here
+		n = len(str)
+        dp = [[0 for _ in range(n + 1)] for _ in range(n + 1)]
+ 
+        for i in range(1, n + 1):
+            for j in range(1, n + 1):
+                if str[i - 1] == str[j - 1] and i != j:
+                    dp[i][j] = 1 + dp[i - 1][j - 1]
+                else:
+                    dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
+ 
+        return dp[n][n]
+
+# Question 20 Leetcode
+# Question Link: https://leetcode.com/problems/length-of-last-word/submissions/
+# Answer
+def lengthOfLastWord(self, s: str) -> int:
+        i = len(s) - 1
+        ans = 0
+
+        while s[i] == " ":
+            i -= 1
+        while i >= 0 and s[i] != " ":
+            ans += 1
+            i -= 1
+        return ans
+
+# Question 21 Leetcode
+# Question Link: https://leetcode.com/problems/number-of-1-bits
+# Answer
+def hammingWeight(self, n: int) -> int:
+        ans = 0
+        while n:
+            ans += n%2
+            n = n >> 1
+        return ans
+
+# Question 22 Geeks for Geeks
+# Question Link: https://practice.geeksforgeeks.org/problems/longest-palindromic-subsequence-1612327878/1
+# Answer
+def longestPalinSubseq(self, S):
+        # code here
+        n = len(S)
+        dp = [[0] * n for _ in range(n)]
+        for i in range(n):
+            dp[i][i] = 1
+        for cl in range(2, n+1):
+            for i in range(n - cl + 1):
+                j = i + cl - 1
+                if S[i] == S[j] and cl == 2:
+                    dp[i][j] = 2
+                elif S[i] == S[j]:
+                    dp[i][j] = dp[i+1][j-1] + 2
+                else:
+                    dp[i][j] = max(dp[i+1][j], dp[i][j-1])
+        
+        return dp[0][n-1]
+
+# Question 23 Leetcode
+# Question Link:https://leetcode.com/problems/remove-element/submissions/
+# Answer
+def removeElement(self, nums: List[int], val: int) -> int:
+        k = 0
+
+        for i in range(len(nums)):
+            if nums[i] != val:
+                nums[k] = nums[i]
+                k += 1
+        return k
+
+# Question 24 Leetcode
+# Question Link:https://leetcode.com/problems/palindrome-number/submissions/
+# Answer
+def isPalindrome(self, x: int) -> bool:
+        if x < 0:
+            return False
+            
+        reversedNum = 0
+        temp = x
+
+        while temp != 0:
+            digit = temp % 10
+            reversedNum = reversedNum * 10 + digit
+            temp //= 10
+
+        return reversedNum == x
