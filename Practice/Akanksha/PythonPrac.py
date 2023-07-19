@@ -312,3 +312,53 @@ def hammingWeight(self, n: int) -> int:
             ans += n%2
             n = n >> 1
         return ans
+
+# Question 22 Geeks for Geeks
+# Question Link: https://practice.geeksforgeeks.org/problems/longest-palindromic-subsequence-1612327878/1
+# Answer
+def longestPalinSubseq(self, S):
+        # code here
+        n = len(S)
+        dp = [[0] * n for _ in range(n)]
+        for i in range(n):
+            dp[i][i] = 1
+        for cl in range(2, n+1):
+            for i in range(n - cl + 1):
+                j = i + cl - 1
+                if S[i] == S[j] and cl == 2:
+                    dp[i][j] = 2
+                elif S[i] == S[j]:
+                    dp[i][j] = dp[i+1][j-1] + 2
+                else:
+                    dp[i][j] = max(dp[i+1][j], dp[i][j-1])
+        
+        return dp[0][n-1]
+
+# Question 23 Leetcode
+# Question Link:https://leetcode.com/problems/remove-element/submissions/
+# Answer
+def removeElement(self, nums: List[int], val: int) -> int:
+        k = 0
+
+        for i in range(len(nums)):
+            if nums[i] != val:
+                nums[k] = nums[i]
+                k += 1
+        return k
+
+# Question 24 Leetcode
+# Question Link:https://leetcode.com/problems/palindrome-number/submissions/
+# Answer
+def isPalindrome(self, x: int) -> bool:
+        if x < 0:
+            return False
+            
+        reversedNum = 0
+        temp = x
+
+        while temp != 0:
+            digit = temp % 10
+            reversedNum = reversedNum * 10 + digit
+            temp //= 10
+
+        return reversedNum == x
