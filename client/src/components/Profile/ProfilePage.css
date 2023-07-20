@@ -4,22 +4,22 @@
 }
 .user-pic {
   background: rgba(217, 217, 217, 1);
-  width: 50%;
-  height: 50px;
+  width: 5rem;
+  height: 5rem;
   border-radius: 50px;
-  margin-left: 45rem;
+  margin-left: 48rem;
 }
-
 .upper-portion {
   display: flex;
   flex-direction: column;
 }
 .mid-portion {
-  margin-top: 35%;
+  margin-top: 25%;
 }
 .details {
   display: flex;
   flex-direction: row;
+  margin-left: 4rem;
 }
 .post-button {
   background: rgba(71, 17, 146, 1);

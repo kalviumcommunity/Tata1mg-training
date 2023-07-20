@@ -362,3 +362,18 @@ def isPalindrome(self, x: int) -> bool:
             temp //= 10
 
         return reversedNum == x
+
+# Question 25 Geeks for Geeks
+# Question Link:https://practice.geeksforgeeks.org/problems/non-repeating-character-1587115620/1
+# Answer
+def nonrepeatingCharacter(self,s):
+        #code here
+        d={}
+        if len(s)==0:
+            return '$'
+        for i in s:
+            d[i]=1+d.get(i,0)
+        for c in s:
+            if d[c]==1:
+                return c
+        return '$'
