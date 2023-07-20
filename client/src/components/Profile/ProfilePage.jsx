@@ -7,7 +7,7 @@ const ProfilePage = () => {
       <div className="upper-portion">
         <img src="cover image" alt="cover-image" className="cover-image" />
         <div className="mid-portion">
-          <img src="" alt="user-pic" className="user-pic" />
+          <img src="" alt="" className="user-pic" />
           <h1 className="username">{/* {us er.userName} */}</h1>
         </div>
       </div>
